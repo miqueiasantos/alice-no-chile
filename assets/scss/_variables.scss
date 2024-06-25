@@ -1,0 +1,7 @@
+@use "sass:map";
+$base-convert: 0.8; // 0.7; // 1920 to 1360
+$grid-container-width: 1160px;
+$breakpoints: (small: 0px, xsmall: 666px, medium: 767px, large: 991px, xlarge: 1023px, xxlarge: 1160px);
+$primary-color: #004CA4;
+$secondary-color: #EA5D65;
+$font-color: #FFFFFF;

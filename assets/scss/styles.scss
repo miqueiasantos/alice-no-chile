@@ -1,0 +1,120 @@
+@import 'reset';
+@import 'fonts';
+@import 'variables';
+@import 'mixin';
+
+html,
+body { width: 100%; height: 100%; min-height: 100vh;}
+
+body {
+    font-family: "Poppins", "Arial", "sans-serif";
+    font-weight: normal;
+    font-size: 18px;
+    color: $font-color;
+    line-height: 1.4em;
+    background-color: $primary-color;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1em;
+    margin: 0.5em 0;
+}
+
+strong {font-weight: 600;}
+
+#content {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: map-get($breakpoints, medium)) {
+       height: auto;
+    }
+}
+
+#content .container {
+    width: 100%;
+    max-width: 760px;
+    padding: 50px 30px;
+}
+#content .container h1 {
+    visibility: hidden;
+    margin: 0;
+    height: 0;
+}
+#content .container .logo {
+    margin: 0 auto 50px auto;
+    display: table;
+    @media(max-width: map-get($breakpoints, medium)) {
+        max-width: 75%;
+    }
+}
+#content .container p {
+    font-size: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 auto;
+    max-width: 570px;
+}
+#content .container p.destaque {
+    margin-bottom: 25px;
+}
+#content .container hr {
+    border: 0;
+    background: url("../images/line.svg") center top no-repeat;
+    padding-top: 27px;
+    margin: 25px 0;
+    width: 100%;
+    &.down {
+        transform: rotateX(180deg);
+    }
+}
+#content .container .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media(max-width: map-get($breakpoints, medium)) {
+        flex-direction: column;
+    }
+}
+#content .container .links .link {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #FFFFFF;
+    @media(max-width: map-get($breakpoints, medium)) {
+        margin: 10px 0;
+    }
+}
+#content .container .links .link.phone {
+    font-size: 18px;
+}
+#content .container .links .link svg {
+    margin-right: 10px;
+}
+#content .container footer {
+    font-size: 13px;
+    color: $secondary-color;
+    text-align: center;
+}
+#content .container footer p {
+    font-size: 15px;
+    @media(max-width: map-get($breakpoints, medium)) {
+        font-size: 13px;
+    }
+}
+
+
+
+
